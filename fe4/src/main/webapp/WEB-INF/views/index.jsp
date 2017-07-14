@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -17,6 +18,7 @@
 
 
 <body>
+<jsp:include page="home.jsp" />
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -28,7 +30,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img class="first slide" src="C:\Users\LENOVO\Desktop\carousel2.jpg" alt="first slide">  
+      <img height="1200px" width="2000px" class="first slide" src="C:\Users\LENOVO\Desktop\carousel2.jpg" alt="first slide">  
     </div>
 
     <div class="item">
@@ -50,6 +52,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>

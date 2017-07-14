@@ -20,7 +20,5 @@
 
 <property name="suffix" value=".jsp"></property>
 </bean>
+<mvc:resources location="/WEB-INF/resources/images/" mapping="/resources/images/**"></mvc:resources>
 </beans>
-
-
-

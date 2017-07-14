@@ -1,3 +1,5 @@
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width,initial-scale=1" >
@@ -8,11 +10,11 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="http://ajax.googleeapis.com/ajax/lib/jquery/3.2.1/jquery.min.js"></script>
+
 <title>Homepage</title>
 </head>
 <body>
- <nav role="main" class="navbar navbar-default" style="margin-bottom:0;" >
+ <nav role="main" style="background-color: #C6A970  class="navbar navbar-default" >
   <div class="container">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#collapse-example" aria expanded="false">
 
@@ -26,62 +28,191 @@
 
 <div class="collapse navbar-collapse" id="collapse-example">
 
-
-<ul class="nav navbar-nav">
-<li class=""navbar-brand" href="#">
-<img src="C:\Users\LENOVO\Desktop\name.png" height="60px" width="60px"   style="margin-top:-10px;">
+<ul class="nav navbar-nav" style="clear:left;">
+<li class="navbar-brand" href="#">
+<img src="C:\Users\LENOVO\Desktop\name.png" height="60px" width="60px"   style="margin-top:-20px;">
 </li>
 <li class="active">
-<a href="home.html">Home
+<a href="home.html"><span class="glyphicon glyphicon-home"></span> Home</a>
+</li>
 <span class="sr-only">You are in Homepage
 </span>
-</a>
+
+<li>
+<a href="aboutus.html">AboutUs</a>
 </li>
-
-<li><a href="#">About Us</a></li>
-
-<li><a href="#">offers</a></li>
-
+<span class="sr-only">You are in AboutUs page
+</span>
 
 <li class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#">Brands
-<span class="caret">
-</span>
-</a>
-
-
-<ul class="dropdown-menu">
-<li><a href="#">lakme</a></li>
-<li><a href="#">lotus</a></li>
-<li><a href="#">nykaa</a></li>
-</ul>
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Brands<strong class="caret"></strong></a>
+   <ul class="dropdown-menu">
+   <li>
+     <a href="#">Lakme</a>
+     </li>
+     
+     <li>
+     <a href="#">Lotus</a>
+     </li>
+     
+     <li>
+     <a href="#">Nykaa</a>
+     </li>
+   <li class="divider">
+     
+     </li>
+     
+     
+     <li class="dropdown-header">
+     Organic Products
+     </li>
+     
+     <li>
+     <a href="#">Pitanjali</a>
+     </li>
+     
+      
+     <li>
+     <a href="#">Envirotas</a>
+     </li>
+   </ul>
 </li>
-</ul>
-<ul class="nav navbar-nav navbar-right">
+
+
+
+
 <li>
-<div class="collapse navbar-collapse" id="search">
-               <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                   
-                    </form>
-                    <span class="glyphicon glyphicon-search" style="margin-top:17px;"></span>  
-                    </div>
-                    </li>
-                  
-<li><a href="#">Login</a></li>
-<li><button class="btn btn-default">Sign Out</button></li>
+<a href="#">Offers</a>
+</li>
+<span class="sr-only">offers available
+</span>
+
 </ul>
-</div>
+
+<form class="navbar-form pull-left">
+
+
+                    <input type="text" class="form-control" placeholder="Search" style="width: 200px;">
+                    <button style="width: 29px;height: 29px"type="submit" class="btn-btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+<ul class="nav navbar-nav navbar-right">             
+    <li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> My account<strong class="caret"></strong></a>
+   <ul class="dropdown-menu">
+   <li>
+     <a href="#"><span class="glyphicon glyphicon-refresh"></span>Update Profile</a>
+     </li>
+     
+     <li>
+     <a href="#"><span class="glyphicon glyphicon-inbox"></span> Registration</a>
+     </li>
+     
+     <li>
+     <a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+     </li>
+   
+     
+     </li>
+     </ul>
+     </li>
+     </ul>
+     
+
 </div>
 </nav>
 <nav class="navbar navbar-default nav2" role="navigation" style="margin-top:0;">
+
+<ul class="nav navbar-nav" style="clear:left;">
+
+<li class="#">
+<a href="#"></a>
+</li>
+<li class="#">
+<a href="#"></a>
+</li>
+
+<li class="#">
+<a href="#"></a>
+</li>
+<li class="#">
+<a href="#"></a>
+</li>
+
+
+<li class="#">
+<a href="#">  Face  </a>
+</li>
+<span class="sr-only">face products
+</span>
+
+<li class="#">
+<a href="#"></a>
+</li>
+
+<li>
+<a href="#">  Eyes  </a>
+</li>
+<span class="sr-only"> eyes products
+</span>
+
+<li class="#">
+<a href="#"></a>
+</li>
+
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Skin<strong class="caret"></strong></a>
+   <ul class="dropdown-menu">
+   <li>
+     <a href="#">Lakme</a>
+     </li>
+     
+     <li>
+     <a href="#">Lotus</a>
+     </li>
+     
+     <li>
+     <a href="#">Nykaa</a>
+     </li>
+   </ul>
+</li>
+
+<li class="#">
+<a href="#"></a>
+</li>
+
+
+<li>
+<a href="#">  Hair  </a>
+</li>
+<span class="sr-only">hair products
+</span>
+
+
+<li class="#">
+<a href="#"></a>
+</li>
+
+<li>
+<a href="#">  Herbal  </a>
+</li>
+<span class="sr-only"> herbal products
+</span>
+
+<li class="#">
+<a href="#"></a>
+</li>
+
+<li>
+<a href="#">  Fragrance  </a>
+</li>
+<span class="sr-only"> fragrance
+</span>
+</ul>
               
-               <button type="submit" class="btn btn-default">Submit</button>
-               </form>
-               </div>
-       </nav>   
+               
+       </nav> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>
