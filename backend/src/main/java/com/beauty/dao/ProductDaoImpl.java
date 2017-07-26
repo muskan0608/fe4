@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.beauty.model.Category;
 import com.beauty.model.Product;
 
 @Repository
@@ -46,5 +47,13 @@ public class ProductDaoImpl implements ProductDao {
 	{
 		Session session=sessionFactory.getCurrentSession();
 		session.update(product);
+	}
+	
+	public List<Category> getAllCategories()
+	{
+		Session session=sessionFactory.getCurrentSession();
+				Query query=session.createQuery("from Category");
+				List<Category> categories=query.list();
+				return categories;
 	}
 }
