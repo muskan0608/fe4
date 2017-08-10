@@ -25,7 +25,7 @@ $(document).ready(function() {
 <body>
 
 <br>
-<p class="text-center"><strong>List of products</strong></p>
+<p class="text-center" style="font-size:25px"><strong>List of products</strong></p>
 
 <div class="container">
 <table class="table table-hover">
@@ -44,25 +44,27 @@ $(document).ready(function() {
  <c:forEach items="${product}" var="p">
  <c:url value="/resources/images/${p.id}.png" var="imageUrl">
  </c:url>
-<c:url value="/all/product/viewproduct/${p.id}" var="viewUrl">
+<c:url value="viewproduct${p.id}" var="viewUrl">
 </c:url>
 
 <c:url value="/admin/product/deleteproduct/${p.id}" var="deleteUrl">
 </c:url>
  
- <c:url value="/admin/product/geteditform/${p.id}" var="editUrl">
+ <c:url value="adminproductgeteditform${p.id}" var="editUrl">
 </c:url>
  
  <tr>
- <td><img src="${imageUrl}" height="50" width="50"></td>
+ <td  style="height:100px"><img src="${imageUrl}" height="50" width="50"></td>
  <td><a href="${viewUrl}"></a>${p.productName}</td>
  <td> ${p.category.categoryName} </td>
  <td>${p.price}</td>
  <td>${p.description}</td>
  <td>
  <a href="${viewUrl}"><span class="glyphicon glyphicon-info-sign" style="color:green"></span></a>
+ <security:authorize access="hasRole('ROLE_ADMIN')">
  <a href="${deleteUrl}"><span class="glyphicon glyphicon-trash" style="color:red"></span></a>
  <a href="${editUrl}"><span class="glyphicon glyphicon-pencil"></span></a>
+ </security:authorize>
  </td>
  </tr>
  </c:forEach>

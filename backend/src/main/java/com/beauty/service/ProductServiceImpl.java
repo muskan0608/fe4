@@ -3,13 +3,14 @@ package com.beauty.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.beauty.dao.ProductDao;
 import com.beauty.model.Category;
 import com.beauty.model.Product;
-
+@Repository
 @Service
 @Transactional
 public class ProductServiceImpl implements ProductService{
@@ -46,6 +47,11 @@ public class ProductServiceImpl implements ProductService{
 	public List<Category> getAllCategories()
 	{
 	return productDao.getAllCategories();
+	}
+	
+	public List<Product> getProductByCategory(int cid)
+	{
+		return productDao.getProductByCategory(cid);
 	}
 	
 }

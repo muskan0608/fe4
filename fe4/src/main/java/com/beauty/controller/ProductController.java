@@ -8,8 +8,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,17 +17,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.beauty.configuration.DBConfiguration;
-import com.beauty.dao.ProductDaoImpl;
 import com.beauty.model.Category;
 import com.beauty.model.Product;
 import com.beauty.service.ProductService;
-import com.beauty.service.ProductServiceImpl;
 
 @Controller
 public class ProductController {
-    ApplicationContext context=new AnnotationConfigApplicationContext(DBConfiguration.class,ProductDaoImpl.class,ProductServiceImpl.class);
-    ProductService productService =(ProductService)context.getBean("productServiceImpl");
+   @Autowired
+    ProductService productService;
 
 	
 	
@@ -61,7 +57,7 @@ public String SaveProduct(@Valid @ModelAttribute(name="product")Product product,
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	return "success";
+	return "redirect:/getallproducts";
 }
 
 @RequestMapping("/getallproducts")
@@ -72,7 +68,7 @@ public String getAllProducts(Model model)
 	return "productlist";
 }
 
-@RequestMapping("/all/product/viewproduct/{id}")
+@RequestMapping("/viewproduct{id}")
 public String getProductById(@PathVariable int id,Model model){
 	
 	Product product=productService.getProductById(id);
@@ -88,7 +84,7 @@ public String deleteProductById(@PathVariable int id)
 }
 
 
-@RequestMapping("admin/product/geteditform/{id}")
+@RequestMapping("adminproductgeteditform{id}")
 public String getEditForm(@PathVariable int id, Model model)
 {
 	Product product=productService.getProductById(id);
@@ -121,5 +117,17 @@ public String editProduct(@Valid @ModelAttribute(name="productObj")Product produ
 	
 }
 
+  @RequestMapping("searchbyCategory{cid}")
+  public String selectByCategory(@PathVariable int cid,Model model)
+  {
+	 List<Product> products=productService.getProductByCategory(cid);
+	  model.addAttribute("product", products);
+	  return "productlist";
+  }
+  
+  
+  
+  
+  
 
 }

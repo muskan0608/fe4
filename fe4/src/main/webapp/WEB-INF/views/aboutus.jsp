@@ -9,7 +9,7 @@
 <body>
 <jsp:include page="home.jsp" />
 <div align="center">
-<img src="C:\Users\LENOVO\Desktop\name1.png " height="100px" width="100px">
+<img src="resources/images/name1.png " height="100px" width="100px">
 <h1><font color="DeepPink"><b>About GIRLUSH</b></font></h1>
 
 <hr width="800px" color="Pink">
@@ -32,26 +32,28 @@ GIRLUSH continuously innovates to offer a wide range of high performance and wor
 <div class="row" id="features">
 <div class="col-sm-4 feature">
 <div class="panel">
-<img src="C:\Users\LENOVO\Desktop\ab1.png" height="100px" width="100px" align="middle">
+<img src="resources/images/ab1.png" height="100px" width="100px" align="middle">
 <br>
 <p>GIRLUSH introduces make up to Indian women and takes pride in being the expert on Indian Beauty.</p>
 </div>
 </div>
 
 <div class="col-sm-4 feature">
-<img src="C:\Users\LENOVO\Desktop\ab2.png" height="100px" width="100px" >
+<div class="panel">
+<img src="resources/images/ab2.png" height="100px" width="100px" >
 <br>
 <p>GIRLUSH is a COMPLETE BEAUTY BRAND spanning colour cosmetics & skin care and extending to beauty services .</p>
 </div>
-
+</div>
 
 <div class="col-sm-4 feature">
-<img src="C:\Users\LENOVO\Desktop\ab3.jpg" height="100px" width="100px" >
+<div class="panel">
+<img src="resources/images/ab3.jpg" height="100px" width="100px" >
 <br>
 <p>GIRLUSH continuously innovates to offer a wide range of high performance and world class cosmetics, skincare products.</p>
 </div>
 </div>
-
+</div>
 
 
 <br>
@@ -101,3 +103,4 @@ Mumbai, Maharashtra 400050 </h4>
 
 </body>
 </html>
+<%@include file="footer.jsp" %>

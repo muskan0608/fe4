@@ -13,4 +13,5 @@ Product getProductById(int id);
 void deleteProduct(Product product);
 void editProduct(Product product);
 List<Category> getAllCategories();
+public List<Product> getProductByCategory(int cid);
 }

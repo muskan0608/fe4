@@ -10,6 +10,8 @@
 
 <body>
 <jsp:include page="home.jsp" />
+
+<div class="container">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -21,15 +23,15 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img height="1200px" width="2000px" class="first slide" src="C:\Users\LENOVO\Desktop\carousel2.jpg" alt="first slide">  
+      <img class="first slide" src="resources/images/carousel2.jpg" alt="first slide">  
     </div>
 
     <div class="item">
-      <img class="second slide" src="C:\Users\LENOVO\Desktop\carousel3.jpg" alt="second slide">
+      <img class="second slide" src="resources/images/carousel3.jpg" alt="second slide">
     </div>
 
     <div class="item">
-      <img class="thirs slide" src="C:\Users\LENOVO\Desktop\carousel4.jpg" alt="third slide">
+      <img class="thirs slide" src="resources/images/carousel4.jpg" alt="third slide">
     </div>
   </div>
 
@@ -44,6 +46,41 @@
   </a>
 </div>
 
+<div class="row" id="features">
+<div class="col-sm-6 feature">
+<div class="panel">
+<img src="resources/images/index1.png" height="500px" width="500px" align="middle">
+<br>
+<p align="center"><h4><a href="getallproducts"><font color="pink">Face Products</font></a></h4></p>
+</div>
+</div>
 
+<div class="col-sm-6 feature">
+<div class="panel">
+<img src="resources/images/eye.jpg" height="500px" width="500px" align="middle">
+<br>
+<p align="center"><h4><a href="getallproducts"><font color="pink">Eye Products</font></a></h4></p>
+</div>
+</div>
+</div>
+
+<div class="row" id="features">
+<div class="col-sm-6 feature">
+<div class="panel">
+<img src="resources/images/hair.jpg" height="500px" width="500px" align="middle">
+<br>
+<p align="center"><h4><a href="getallproducts"><font color="pink">Hair Products</font></a></h4></p>
+</div>
+</div>
+
+<div class="col-sm-6 feature">
+<div class="panel">
+<img src="resources/images/skin.jpg" height="500px" width="500px" align="middle">
+<br>
+<p align="center"><h4><a href="getallproducts"><font color="pink">Skin Products</font></a></h4></p>
+</div>
+</div>
+</div></div>
 </body>
 </html>
+<%@include file="footer.jsp" %>

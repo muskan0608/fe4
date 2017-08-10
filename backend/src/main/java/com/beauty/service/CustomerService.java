@@ -4,4 +4,5 @@ import com.beauty.model.Customer;
 
 public interface CustomerService {
 void registerCustomer(Customer customer);
+public Customer getCustomerByUsername(String username);
 }

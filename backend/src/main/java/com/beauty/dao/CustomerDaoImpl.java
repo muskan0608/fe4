@@ -1,5 +1,6 @@
 package com.beauty.dao;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +37,13 @@ public class CustomerDaoImpl implements CustomerDao {
 		customer.setCart(cart);
 
 		session.save(customer);
+	}
+
+	public Customer getCustomerByUsername(String username) {
+		Session session=sessionFactory.getCurrentSession();
+		Query query=session.createQuery("from Customer where user.username=?");
+		query.setString(0,username);
+		Customer customer=(Customer)query.uniqueResult();
+		return customer;
 	}
 }

@@ -27,7 +27,8 @@ public class Customer {
 	@Email
 	private String email;;
 	@NotEmpty
-	@Size(max=10,min=10)
+	@Size(max=10,min=10,message="phone no should be of 10 digits")
+	
 	private String phone;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")
