@@ -63,14 +63,14 @@
 						<div class="form-group">
 							<form:label path="firstname">Enter Firstname</form:label>
 							<form:input path="firstname" id="firstname" class="form-control"
-								/>
+								 />
 							<form:errors path="firstname" cssStyle="color:red"></form:errors>
 						</div>
 
 						<div class="form-group">
 							<form:label path="lastname">Enter Lastname</form:label>
 							<form:input path="lastname" id="lastname" class="form-control"
-								/>
+								  />
 							<form:errors path="lastname" cssStyle="color:red"></form:errors>
 						</div>
 
@@ -105,7 +105,7 @@
 
 							<form:label path="user.password">Enter Password</form:label>
 
-							<form:input path="user.password" id="password"
+							<form:input path="user.password" type="password" id="password"
 								class="form-control" />
 <br>
 							<form:errors path="user.password" cssStyle="color:red"></form:errors>

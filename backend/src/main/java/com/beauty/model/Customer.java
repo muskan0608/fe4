@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
@@ -20,15 +21,20 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	@NotEmpty
+	@Pattern(regexp="^[A-Za-z]*",message="name cannot contain numbers")
 	private String firstname;
 	@NotEmpty
+	@Pattern(regexp="^[A-Za-z]*",message="name cannot contain numbers")
 	private String lastname;
 	@Column(unique=true,nullable=false)
 	@Email
+	@Pattern(regexp= "^.{5,}(.+)@(.+)$",message="five or more characters required in the email address")
+	@NotEmpty
+    
 	private String email;;
 	@NotEmpty
-	@Size(max=10,min=10,message="phone no should be of 10 digits")
-	
+	@Size(max=10,min=10)
+	@Pattern(regexp= "^[7-9][0-9]{9}$",message="it should start from 7,8,9")
 	private String phone;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")

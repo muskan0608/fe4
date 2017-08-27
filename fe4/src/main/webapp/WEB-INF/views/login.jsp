@@ -21,9 +21,9 @@
 				<div class="form-group">
 					<div class="clearfix" align="center">
 						<h3>Enter username</h3>
-						<input type="text" name="j_username" /> <br>
+						<input type="text" name="j_username" pattern=".{6,}" title="Six or more characters"/> <br>
 						<h3>Enter password</h3>
-						<input type="password" name="j_password" /><br> <br> <input
+						<input type="password" name="j_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/><br> <br> <input
 							type=submit value="log in"
 							style="color: black; background-color: pink; border: 2px solid #336600; padding: 3px; height: 40px; width: 120px" />
 					</div>

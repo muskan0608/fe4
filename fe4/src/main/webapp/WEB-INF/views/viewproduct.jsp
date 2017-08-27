@@ -13,7 +13,7 @@
 <br>
 <br>
 <div class="panel panel-danger"
-			style="border: 2px solid; margin-left: 100px; margin-right: 100px">
+			style="border: 2px solid; margin-left: 300px; margin-right: 300px">
 			<div class="panel-heading" align="center">
 				<u><h2>DETAILS ABOUT THE PRODUCT</h2></u>
 			</div>
@@ -33,15 +33,25 @@
 <tr>
 <td><font size=4><b>Product Name:</b></font></td><td><font size=4>${product.productName}</font></td>
 </tr>
+<tr class="blank_row">
+            <td colspan="1">&nbsp;</td>
+        </tr>
 
 <tr>
 <td><font size=4><b>Price:</b></font></td><td><font size=4>${product.price}</font></td>
 </tr>
 
+<tr class="blank_row">
+            <td colspan="1">&nbsp;</td>
+        </tr>
+
 <tr>
 <td><font size=4><b>Description:</b></font></td><td><font size=4>${product.description}</font></td>
 </tr>
 
+<tr class="blank_row">
+            <td colspan="1">&nbsp;</td>
+        </tr>
 <tr>
 <td><font size=4><b>Quantity:</b></font></td><td><font size=4>${product.quantity}</font></td>
 </tr>
@@ -55,11 +65,11 @@
 <c:if test="${product.quantity!=0 }">
 <c:url value="/cart/addtocart/${product.id }" var="url"></c:url>
 <form action="${url }">
-<font size=4>Enter Units</font><input  type="text" name="units"><br>
-<br>
+<security:authorize access="hasRole('ROLE_USER')">
+<font size=4><b>Enter Units </b></font><input  type="text" name="units">
 <button type="submit" 
- style="background:none;border:none;padding:0" class="btn btn-default btn-lg">
-<span class="glyphicon glyphicon-shopping-cart"></span></button>
+ style="background:pink;border:1px;padding:0" class="btn btn-default btn-lg">
+ Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></button></security:authorize>
 </form>
 </c:if>
 <br>

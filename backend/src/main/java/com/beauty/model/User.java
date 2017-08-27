@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -23,7 +24,11 @@ public class User {
 	private int id;
 	@NotEmpty
 	@Column(unique = true, nullable = false)
+	@Pattern(regexp =".{6,}", message = "it must contain 6 or more characters.")
+	
 	private String username;
+	@Pattern(regexp ="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}", message = "Password must contain one digit,one uppercase and one lowercase.")
+	
 	
 	@NotEmpty
 	private String password;

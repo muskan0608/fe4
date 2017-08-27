@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -28,8 +30,10 @@ public class ShippingAddress {
 
 	@NotEmpty(message="country is mandatory")
 	private String country;
-
+	
+	@Size(max=6,min=6,message="it should be of 6 digits")
 	@NotEmpty(message="zipcode is mandatory")
+	@Pattern(regexp="^[0-9]{6}$",message="it should contain numbers")
 	private String zipcode;
 	
 	public int getId() {

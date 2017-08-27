@@ -34,6 +34,14 @@ public class CartItemController {
 	public String addCartItem(@PathVariable int id,@RequestParam int units,Model model)
 	{
 		Product product=productService.getProductById(id);
+		int availableunits=product.getQuantity();
+		
+		if(availableunits<units)
+		{
+			model.addAttribute("quantityless",true);
+			return "redirect:/viewproduct{id}";
+		}
+		
 		User user=(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String username=user.getUsername();
 		Customer customer=customerService.getCustomerByUsername(username);
@@ -93,6 +101,9 @@ public class CartItemController {
 		return "redirect:/cartgetcart";
 	}
 	
-	
+	@RequestMapping("/thankyou")
+	public String thankyou(){
+		return "thankyou";
+	}
 	
 }

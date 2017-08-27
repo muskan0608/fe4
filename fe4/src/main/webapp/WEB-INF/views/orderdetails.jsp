@@ -7,7 +7,7 @@
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
-            <h1>Order</h1>
+            <h1><div style="color:hotpink">Order</div></h1>
 
             <p class="lead">Order confirmation</p>
         </div>
@@ -19,11 +19,11 @@
 
                              <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
 
-                       <div class="txt-center">
+                       <div class="txt-center" style="color:hotpink">
                             <h1>Receipt</h1>
                        </div>
                        ORDER ID: ${order.orderId }
-                  
+                  <br>
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <address>
@@ -58,7 +58,7 @@
                                 <thead>
                                     <tr>
                                         <td>Product</td>
-                                        <td>#</td>
+                                        <td>Quantity</td>
                                         <td class="text-center">Price</td>
                                         <td class="text-center">Total</td>
                                     </tr>
@@ -88,7 +88,9 @@
 
                                 </tbody>
                             </table>
-                            <input type="submit" value="submit">
+                           <div class="clearfix" align="center">
+                            <input type="submit" value="Submit" style="color: black; background-color: pink; border: 2px solid #336600; padding: 3px; height: 40px; width: 120px">
+					</div>
                         </div>
 
 

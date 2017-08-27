@@ -2,6 +2,7 @@
 <html>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width,initial-scale=1" >
+<link href="resources/images/style.css" rel="stylesheet" type="text-css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -105,11 +106,11 @@
 
 
 <li class="#">
-<a href="getallproducts"><font color="black" size="3"><div style="padding-left:200px;padding-right:25px"> All Products</div></font></a>
+<a href="getallproducts"><font color="black" size="4"><div style="padding-left:200px;padding-right:25px"> All Products</div></font></a>
 </li>
 
 <li class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#"><div style="padding-left:25px;padding-right:25px"><font color="black" size="3">Face</font><strong class="caret" style="color:black;"></strong></div></a>
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"><div style="padding-left:25px;padding-right:25px"><font color="black" size="4">Face</font><strong class="caret" style="color:black;"></strong></div></a>
    <ul class="dropdown-menu">
    <li>
      <a href="searchbyCategory1"><font color="black">Concealer</font></a>
@@ -143,7 +144,7 @@
 
 
 <li class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#"><div style="padding-left:25px;padding-right:25px"><font color="black" size="3">Eyes</font><strong class="caret" style="color:black;"></strong></div></a>
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"><div style="padding-left:25px;padding-right:25px"><font color="black" size="4">Eyes</font><strong class="caret" style="color:black;"></strong></div></a>
    <ul class="dropdown-menu">
    <li>
      <a href="searchbyCategory6"><font color="black">Kajal</font></a>
@@ -166,7 +167,7 @@
 
 
 <li class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#"><div style="padding-left:25px;padding-right:25px"><font color="black" size="3">Skin</font><strong class="caret" style="color:black;"></strong></div></a>
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"><div style="padding-left:25px;padding-right:25px"><font color="black" size="4">Skin</font><strong class="caret" style="color:black;"></strong></div></a>
    <ul class="dropdown-menu">
    <li>
      <a href="searchbyCategory10"><font color="black">Facewash</font></a>
@@ -190,7 +191,7 @@
 
 
 <li class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#"><div style="padding-left:25px;padding-right:25px"><font color="black" size="3">Hair</font><strong class="caret" style="color:black;"></strong></div></a>
+<a class="dropdown-toggle" data-toggle="dropdown" href="#"><div style="padding-left:25px;padding-right:25px"><font color="black" size="4">Hair</font><strong class="caret" style="color:black;"></strong></div></a>
    <ul class="dropdown-menu">
    <li>
      <a href="searchbyCategory14">Shampoo</a>
@@ -205,12 +206,12 @@
      </li>
    </ul>
 </li>
+</ul>
 
-
+  <ul class="nav navbar-nav navbar-right">  
    
-   
-   <li class="dropdown" style="margin-left:560px">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-left:25px;padding-right:25px"><font color="black" size="3"></font>
+   <li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-left:25px;padding-right:25px"><font color="black" size="4"></font>
 <c:if test="${pageContext.request.userPrincipal.name!=null }">
 			<font color="black" size="3">Welcome ${pageContext.request.userPrincipal.name }</font></c:if>
 				 <security:authorize access="hasRole('ROLE_ADMIN')"><strong class="caret" style="color:black;"></strong></security:authorize>

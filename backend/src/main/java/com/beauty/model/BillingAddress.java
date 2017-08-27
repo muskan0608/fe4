@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -26,8 +28,9 @@ private String state;
 
 @NotEmpty(message="country is mandatory")
 private String country;
-
+@Pattern(regexp="^[0-9]{6}$",message="it should contain numbers")
 @NotEmpty(message="zipcode is mandatory")
+@Size(max=6,min=6)
 private String zipcode;
 
 public int getId() {

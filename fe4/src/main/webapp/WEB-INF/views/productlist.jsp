@@ -27,8 +27,8 @@ $(document).ready(function() {
 <br>
 <p class="text-center" style="font-size:25px"><strong>List of products</strong></p>
 
-<div class="container">
-<table class="table table-hover">
+<div class="container-fluid">
+<table class="table table-hover table-striped">
 <thead>
 <tr class="danger">
 <th>Image</th>
@@ -54,17 +54,25 @@ $(document).ready(function() {
 </c:url>
  
  <tr>
- <td  style="height:100px"><img src="${imageUrl}" height="50" width="50"></td>
- <td><a href="${viewUrl}"></a>${p.productName}</td>
- <td> ${p.category.categoryName} </td>
- <td>${p.price}</td>
- <td>${p.description}</td>
+ <td  style="height:100px"><img src="${imageUrl}" height="200" width="300"></td>
+ <td><a href="${viewUrl}"></a><h3><u>${p.productName}</u></h3></td>
+ <td><br> <h4>${p.category.categoryName} </h4></td>
+ <td><br><h4>${p.price}</h4></td>
+ <td><br><h4>${p.description}</h4></td>
  <td>
- <a href="${viewUrl}"><span class="glyphicon glyphicon-info-sign" style="color:green"></span></a>
+ <br>
+ 
+ <a href="${viewUrl}"><span class="glyphicon glyphicon-info-sign" style="color:green;font-size:0.6cm"></span></a>
  <security:authorize access="hasRole('ROLE_ADMIN')">
- <a href="${deleteUrl}"><span class="glyphicon glyphicon-trash" style="color:red"></span></a>
- <a href="${editUrl}"><span class="glyphicon glyphicon-pencil"></span></a>
+ <br>
+ <br>
+ <a href="${deleteUrl}"><span class="glyphicon glyphicon-trash" style="color:red;font-size:0.6cm"></span></a>
+ <br>
+ <br>
+ <a href="${editUrl}"><span class="glyphicon glyphicon-pencil" style="font-size:0.6cm"></span></a>
  </security:authorize>
+ 
+ 
  </td>
  </tr>
  </c:forEach>
